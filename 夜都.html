@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜都</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        /* 容器布局 */
+        .showroom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 标题样式 */
+        .showroom-title {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e53935;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* 车辆网格 */
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        /* 车辆卡片 */
+        .vehicle-card {
+            background: #2d2d2d;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(229, 57, 53, 0.2);
+        }
+
+        /* 车辆图片 */
+        .vehicle-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 3px solid #e53935;
+        }
+
+        /* 参数面板 */
+        .specs-panel {
+            padding: 20px;
+            background: linear-gradient(45deg, #2d2d2d, #404040);
+        }
+
+        .vehicle-model {
+            color: #e53935;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .vehicle-specs {
+            list-style: none;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #404040;
+        }
+
+        .spec-label {
+            color: #888;
+        }
+
+        .spec-value {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 15px;
+            right: -40px;
+            background: #e53935;
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .vehicle-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .showroom-title {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="showroom">
+        <h1 class="showroom-title">赞助车展示</h1>
+        
+        <div class="vehicle-grid">
+            <!-- 车型 -->
+            <div class="vehicle-card">
+                <div class="price-tag">¥398万</div>
+                <img src="cars/urus.jpg" alt="兰博基尼 Urus" class="vehicle-image">
+                <div class="specs-panel">
+                    <h3 class="vehicle-model">兰博基尼 Urus</h3>
+                    <ul class="vehicle-specs">
+                        <li class="spec-item">
+                            <span class="spec-label">引擎：</span>
+                            <span class="spec-value">4.0T V8双涡轮</span>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">马力：</span>
+                            <span class="spec-value">650 HP</span>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">0-100km/h：</span>
+                            <span class="spec-value">3.6秒</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			<!-- 车型 -->
+			<div class="vehicle-card">
+			    <div class="price-tag">¥398万</div>
+			    <img src="cars/urus.jpg" alt="兰博基尼 Urus" class="vehicle-image">
+			    <div class="specs-panel">
+			        <h3 class="vehicle-model">兰博基尼 Urus</h3>
+			        <ul class="vehicle-specs">
+			            <li class="spec-item">
+			                <span class="spec-label">引擎：</span>
+			                <span class="spec-value">4.0T V8双涡轮</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">马力：</span>
+			                <span class="spec-value">650 HP</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">0-100km/h：</span>
+			                <span class="spec-value">3.6秒</span>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+			<!-- 车型 -->
+			<div class="vehicle-card">
+			    <div class="price-tag">¥398万</div>
+			    <img src="cars/urus.jpg" alt="兰博基尼 Urus" class="vehicle-image">
+			    <div class="specs-panel">
+			        <h3 class="vehicle-model">兰博基尼 Urus</h3>
+			        <ul class="vehicle-specs">
+			            <li class="spec-item">
+			                <span class="spec-label">引擎：</span>
+			                <span class="spec-value">4.0T V8双涡轮</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">马力：</span>
+			                <span class="spec-value">650 HP</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">0-100km/h：</span>
+			                <span class="spec-value">3.6秒</span>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+			<!-- 车型 -->
+			<div class="vehicle-card">
+			    <div class="price-tag">¥398万</div>
+			    <img src="cars/urus.jpg" alt="兰博基尼 Urus" class="vehicle-image">
+			    <div class="specs-panel">
+			        <h3 class="vehicle-model">兰博基尼 Urus</h3>
+			        <ul class="vehicle-specs">
+			            <li class="spec-item">
+			                <span class="spec-label">引擎：</span>
+			                <span class="spec-value">4.0T V8双涡轮</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">马力：</span>
+			                <span class="spec-value">650 HP</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">0-100km/h：</span>
+			                <span class="spec-value">3.6秒</span>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+			<!-- 车型 -->
+			<div class="vehicle-card">
+			    <div class="price-tag">¥398万</div>
+			    <img src="cars/urus.jpg" alt="兰博基尼 Urus" class="vehicle-image">
+			    <div class="specs-panel">
+			        <h3 class="vehicle-model">兰博基尼 Urus</h3>
+			        <ul class="vehicle-specs">
+			            <li class="spec-item">
+			                <span class="spec-label">引擎：</span>
+			                <span class="spec-value">4.0T V8双涡轮</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">马力：</span>
+			                <span class="spec-value">650 HP</span>
+			            </li>
+			            <li class="spec-item">
+			                <span class="spec-label">0-100km/h：</span>
+			                <span class="spec-value">3.6秒</span>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+
+
+            <!-- 其他车型模板... -->
+        </div>
+    </div>
+</body>
+</html>
